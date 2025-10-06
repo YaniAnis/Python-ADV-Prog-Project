@@ -28,7 +28,17 @@ RUN apt-get update && apt-get install -y \
     xvfb \
     libssl-dev \
     libffi-dev \
+    libxml2-dev \
+    libxslt1-dev \
+    python3-dev \
+    gcc \
+    g++ \
     build-essential \
+    libjpeg-dev \
+    zlib1g-dev \
+    libfreetype6-dev \
+    liblcms2-dev \
+
     && rm -rf /var/lib/apt/lists/*
 
 # Créer le répertoire de travail
@@ -37,8 +47,13 @@ WORKDIR /app
 # Copier les fichiers de requirements
 COPY requirements.txt .
 
-# Installer les dépendances Python
-RUN pip3 install --no-cache-dir -r requirements.txt
+# Installer pip et setuptools d'abord
+RUN pip3 install --no-cache-dir --break-system-packages --upgrade pip setuptools wheel
+
+# Installer les dépendances Python en plusieurs étapes
+
+RUN pip3 install --no-cache-dir --break-system-packages -r requirements.txt
+
 
 # Copier le code de l'application
 COPY app/ ./app/
