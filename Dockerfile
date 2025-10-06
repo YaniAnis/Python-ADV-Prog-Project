@@ -38,7 +38,6 @@ RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     libfreetype6-dev \
     liblcms2-dev \
-
     && rm -rf /var/lib/apt/lists/*
 
 # Créer le répertoire de travail
