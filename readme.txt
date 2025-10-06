@@ -76,3 +76,6 @@ docker-compose up
 
 Cet outil est destiné à des fins éducatives et de tests autorisés uniquement.
 ```
+
+
+run this commande:  docker-compose up --build -d
