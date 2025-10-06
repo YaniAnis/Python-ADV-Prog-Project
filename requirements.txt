@@ -15,4 +15,3 @@ python-dotenv==1.0.0
 pyyaml==6.0.1
 cryptography==41.0.7
 pycryptodome==3.19.0
-# lxml is installed via system packages and pip separately
