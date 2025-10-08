@@ -49,14 +49,15 @@ COPY requirements.txt .
 # Installer pip et setuptools d'abord
 RUN pip3 install --no-cache-dir --break-system-packages --upgrade pip setuptools wheel
 
-# Installer les dépendances Python en plusieurs étapes
+# Installer FastAPI et uvicorn explicitement
+RUN pip3 install --no-cache-dir --break-system-packages fastapi uvicorn
 
+# Installer les autres dépendances Python
 RUN pip3 install --no-cache-dir --break-system-packages -r requirements.txt
 
-
 # Copier le code de l'application
-COPY app/ ./app/
-COPY scripts/ ./scripts/
+COPY app ./app
+COPY scripts ./scripts
 
 # Rendre les scripts exécutables
 RUN chmod +x scripts/*.sh
@@ -73,11 +74,11 @@ RUN service postgresql start && \
     msfdb init || true && \
     service postgresql stop
 
-# Exposer le port pour l'interface web (optionnel)
-EXPOSE 8080
+# Exposer le port pour FastAPI
+EXPOSE 8000
 
 # Variable d'environnement pour le GUI
 ENV PYTHONUNBUFFERED=1
 
-# Point d'entrée
-CMD ["python3", "app/main.py"]
+# Point d'entrée modifié pour uvicorn
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
