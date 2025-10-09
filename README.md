@@ -29,23 +29,9 @@ setup.bat
   * **Cochez "Disable access control"**
   * Terminez la configuration
 
-4. Construire l’image Docker :
-docker-compose build
 
 
 
-5. Lancer l’application (en mode détaché) :
-docker-compose up --build -d
-
-
-
-### Alternative Sans Interface Graphique (Mode Console)
-
-Si l’interface graphique pose problème, vous pouvez exécuter l’application en mode console :
-docker-compose run --rm pentest-multitools bash
-
-
-Puis utilisez les outils en ligne de commande.
 
 ## 🔧 Fonctionnalités
 
@@ -57,16 +43,7 @@ L’application propose une interface GUI basée sur TTKBootstrap incluant :
 - **Web Scanner** : tests de sécurité d’applications web
 - **Exploit Manager** : gestionnaire Metasploit simplifié
 
-## 📁 Partage du Projet avec vos Collègues
 
-Pour partager votre environnement :
-
-Créer une archive de l’image Docker
-docker save pentest-multitools:latest | gzip > pentest-multitools.tar.gz
-
-Sur la machine du collègue
-docker load < pentest-multitools.tar.gz
-docker-compose up
 
 
 
