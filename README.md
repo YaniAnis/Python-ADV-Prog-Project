@@ -15,6 +15,9 @@ Une plateforme complète pour vos tests d'intrusion, équipée d’une interface
 git clone
 cd pentest-multitools
 
+2. Installer les extension python via la commande :
+python -m pip install --upgrade pip setuptools wheel
+python -m pip install -r requirements.txt
 
 
 2. Configurer l’environnement :
