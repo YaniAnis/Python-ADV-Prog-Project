@@ -53,3 +53,4 @@ L’application propose une interface GUI basée sur TTKBootstrap incluant :
 ## ⚠️ Avertissement Important
 
 Cet outil est strictement destiné à un usage éducatif et à des tests d’intrusion autorisés uniquement.
+.
