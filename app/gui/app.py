@@ -69,18 +69,6 @@ def open_PortScan():
     Port_exit.place(x=950, y=10)
 
 
-
-
-
-
-
-
-
-
-    
-
-
-
 var_dark = tb.IntVar()
 
 def toggle_darkmode():
@@ -90,6 +78,7 @@ def toggle_darkmode():
         Darkmode_switch.config(text="Dark Mode", bootstyle="success,round-toggle")
         group_text.config(bootstyle="light")
         Tools_text.config(bootstyle="light")
+        explication_label.config(bootstyle="light")
         PassCracker_button.config(bootstyle="info,outline")
         PortScanner_button.config(bootstyle="primary,outline")
         Exploiter_button.config(bootstyle="secondary,outline")
@@ -100,6 +89,7 @@ def toggle_darkmode():
         Darkmode_switch.config(text="Light Mode", bootstyle="info,round-toggle")
         group_text.config(bootstyle="dark")
         Tools_text.config(bootstyle="dark")
+        explication_label.config(bootstyle="dark")
         PassCracker_button.config(bootstyle="info")
         PortScanner_button.config(bootstyle="primary")
         Exploiter_button.config(bootstyle="secondary")
@@ -141,7 +131,7 @@ group_text.place(x=330, y=680)
 Tools_text = tb.Label(
     root,
     text=" Tools : ",
-    font=("Arial", 20),
+    font=("Arial", 20,"bold","underline"),
     bootstyle="Dark",
     padding=10
 )
@@ -183,5 +173,34 @@ webscanner_button = tb.Button(
     command=open_webscanner
 )
 webscanner_button.place(x=50, y=550)
+
+frame = tb.LabelFrame(
+    root,
+    text="Présentation",
+    padding=12,
+    bootstyle="info"   # style du cadre
+)
+frame.pack(expand=True)
+
+
+explication_label = tb.Label(
+    frame,
+    text=(
+        "Welcome to our multi-tool application!\n"
+        "It's a tool in an educative way for our advanced programming TP.\n\n"
+        "You can find :\n"
+        "- password cracker\n"
+        "- port scanner\n"
+        "- exploit manager\n"
+        "- web scanner\n\n"
+        "Choose a tool from the left to get started."
+    ),
+    font=("Arial", 12),
+    bootstyle="dark",
+    padding=8,
+    justify="left",
+    wraplength=520   # limite la largeur du texte et force le retour à la ligne
+)
+explication_label.pack(fill="both", expand=True)
 
 root.mainloop()
