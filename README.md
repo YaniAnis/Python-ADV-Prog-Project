@@ -20,7 +20,7 @@ python -m pip install --upgrade pip setuptools wheel
 python -m pip install -r requirements.txt
 
 
-2. Configurer l’environnement :
+3. Configurer l’environnement :
 setup.bat
 
 
