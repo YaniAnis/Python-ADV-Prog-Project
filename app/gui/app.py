@@ -9,11 +9,82 @@ root.resizable(False, False)
 
 
 
-is_dark = False
+def open_passcracker():
+    new_win = tb.Toplevel(root)
+    new_win.title("Password Cracker")
+    new_win.geometry("1024x600")
+    new_win.iconbitmap("app/assets/logo-tete-de-mort-png.ico")
+    new_win.resizable(False, False)
+
+   
+    password_label=tb.Label(new_win, text="Bienvenue dans Password Cracker !", font=("Helvetica", 14),padding=10)
+    password_label.place(x=150, y=40)  # position en pixels
+    password_exit=tb.Button(new_win, text="Fermer", bootstyle="danger", command=new_win.destroy)
+    password_exit.place(x=950, y=10)
+    
+
+
+
+def open_webscanner():
+    new_win2 = tb.Toplevel(root)
+    new_win2.title("Web Scanner")
+    new_win2.geometry("1024x600")
+    new_win2.iconbitmap("app/assets/logo-tete-de-mort-png.ico")
+    new_win2.resizable(False, False)
+
+   
+    Web_label=tb.Label(new_win2, text="Bienvenue dans Web_scanner!", font=("Helvetica", 14),padding=10)
+    Web_label.place(x=150, y=40)  # position en pixels
+    Web_exit=tb.Button(new_win2, text="Fermer", bootstyle="danger", command=new_win2.destroy)
+    Web_exit.place(x=950, y=10)
+
+
+def open_Exploiter():
+    new_win3 = tb.Toplevel(root)
+    new_win3.title("Web Scanner")
+    new_win3.geometry("1024x600")
+    new_win3.iconbitmap("app/assets/logo-tete-de-mort-png.ico")
+    new_win3.resizable(False, False)
+
+   
+    Exploiter_label=tb.Label(new_win3, text="Bienvenue dans Exploiter!", font=("Helvetica", 14),padding=10)
+    Exploiter_label.place(x=150, y=40)  # position en pixels
+    Exploiter_exit=tb.Button(new_win3, text="Fermer", bootstyle="danger", command=new_win3.destroy)
+    Exploiter_exit.place(x=950, y=10)
+
+
+
+
+def open_PortScan():
+    new_win4 = tb.Toplevel(root)
+    new_win4.title("Web Scanner")
+    new_win4.geometry("1024x600")
+    new_win4.iconbitmap("app/assets/logo-tete-de-mort-png.ico")
+    new_win4.resizable(False, False)
+
+   
+    Port_label=tb.Label(new_win4, text="Bienvenue dans Port Scanner!", font=("Helvetica", 14),padding=10)
+    Port_label.place(x=150, y=40)  # position en pixels
+    Port_exit=tb.Button(new_win4, text="Fermer", bootstyle="danger", command=new_win4.destroy)
+    Port_exit.place(x=950, y=10)
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
 var_dark = tb.IntVar()
 
 def toggle_darkmode():
-    global is_dark
+   
     if var_dark.get() == 1:
         root.style.theme_use("vapor")
         Darkmode_switch.config(text="Dark Mode", bootstyle="success,round-toggle")
@@ -23,7 +94,7 @@ def toggle_darkmode():
         PortScanner_button.config(bootstyle="primary,outline")
         Exploiter_button.config(bootstyle="secondary,outline")
         webscanner_button.config(bootstyle="warning,outline")
-        is_dark = True
+     
     else:
         root.style.theme_use("minty")
         Darkmode_switch.config(text="Light Mode", bootstyle="info,round-toggle")
@@ -33,7 +104,7 @@ def toggle_darkmode():
         PortScanner_button.config(bootstyle="primary")
         Exploiter_button.config(bootstyle="secondary")
         webscanner_button.config(bootstyle="warning")
-        is_dark = False
+       
 
 
 
@@ -81,7 +152,8 @@ PassCracker_button = tb.Button(
     text="Password Cracker",
     bootstyle="info",
     width=20,
-    padding=10
+    padding=10,
+    command=open_passcracker
 )
 PassCracker_button.place(x=50, y=100)
 
@@ -89,7 +161,8 @@ PortScanner_button = tb.Button(
     text="Port Scanner",
     bootstyle="primary",
     width=20,
-    padding=10
+    padding=10,
+    command=open_PortScan
 )
 PortScanner_button.place(x=50, y=250)
 
@@ -97,7 +170,8 @@ Exploiter_button = tb.Button(
     text="Exploit Manager",
     bootstyle="secondary",
     width=20,
-    padding=10
+    padding=10,
+    command=open_Exploiter
 )
 Exploiter_button.place(x=50, y=400)
 
@@ -105,7 +179,8 @@ webscanner_button = tb.Button(
     text="Web Scanner",
     bootstyle="warning",
     width=20,
-    padding=10
+    padding=10,
+    command=open_webscanner
 )
 webscanner_button.place(x=50, y=550)
 
