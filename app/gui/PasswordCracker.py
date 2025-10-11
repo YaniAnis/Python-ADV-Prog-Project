@@ -1,0 +1,27 @@
+import ttkbootstrap as tb
+from ttkbootstrap.constants import *
+
+class PasswordCracker():
+    def __init__(self, master):
+        self.window = tb.Toplevel(master)
+        self.window.title("Exploit Manager")
+        self.window.geometry("800x600")
+        try:
+            self.window.iconbitmap("app/assets/logo-tete-de-mort-png.ico")
+        except Exception:
+            pass
+        self.window.resizable(False, False)
+
+        tb.Label(
+            self.window,
+            text="Bienvenue dans PasswordCracker !",
+            font=("Helvetica", 14),
+            padding=10
+        ).place(x=150, y=40)
+
+        tb.Button(
+            self.window,
+            text="Fermer",
+            bootstyle="danger",
+            command=self.window.destroy
+        ).place(x=700, y=10)
