@@ -57,7 +57,7 @@ def open_Exploiter():
 
 def open_PortScan():
     new_win4 = tb.Toplevel(root)
-    new_win4.title("Web Scanner")
+    new_win4.title("Port Scanner")
     new_win4.geometry("1024x600")
     new_win4.iconbitmap("app/assets/logo-tete-de-mort-png.ico")
     new_win4.resizable(False, False)
