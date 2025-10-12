@@ -8,6 +8,7 @@ from WebScanner import WebScanner
 class Home(tb.Window):
     def __init__(self):
         super().__init__(themename="minty")
+        self.overrideredirect(True)
         self.title("Multi-tool")
         self.geometry("1280x720")
         self.iconbitmap("app/assets/logo-tete-de-mort-png.ico")
@@ -16,6 +17,13 @@ class Home(tb.Window):
         self.mainloop()
 
     def ui(self):
+        self.topbar = tb.Frame(self, height=48)
+        self.topbar.place(x=0, y=0, relwidth=1)
+
+        self.logo = tb.PhotoImage(file="app/assets/logo-tete-de-mort-png.png")
+        self.logo_label = tb.Label(self.topbar, image=self.logo, bootstyle="light")
+        self.logo_label.place(x=10, y=6)
+
         self.var_dark = tb.IntVar(value=0)
         self.dark_switch = tb.Checkbutton(
             self,
@@ -34,6 +42,8 @@ class Home(tb.Window):
             width=20,
             padding=10
         )
+        exit_button.place_forget()
+        exit_button.master = self.topbar
         exit_button.place(x=1120, y=10)
 
         self.group_text = tb.Label(
