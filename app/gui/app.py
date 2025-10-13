@@ -4,6 +4,7 @@ from PasswordCracker import PasswordCracker
 from PortScanner import PortScanner
 from ExploitManager import ExploitManager
 from WebScanner import WebScanner
+from HashCracking import HashCracking
 
 class Home(tb.Window):
     def __init__(self):
@@ -33,7 +34,7 @@ class Home(tb.Window):
             width=20,
             padding=10
         )
-        exit_button.place(x=1120, y=10)
+        exit_button.place(x=1090, y=10)
 
         self.group_text = tb.Label(
             self,
@@ -60,7 +61,7 @@ class Home(tb.Window):
             width=20,
             padding=10,
             command=lambda: PasswordCracker(self)
-        ).place(x=50, y=100)
+        ).place(x=50, y=150)
 
         tb.Button(
             self,
@@ -78,7 +79,7 @@ class Home(tb.Window):
             width=20,
             padding=10,
             command=lambda: ExploitManager(self)
-        ).place(x=50, y=400)
+        ).place(x=50, y=350)
 
         tb.Button(
             self,
@@ -87,7 +88,7 @@ class Home(tb.Window):
             width=20,
             padding=10,
             command=lambda: WebScanner(self)
-        ).place(x=50, y=550)
+        ).place(x=50, y=450)
 
         frame = tb.LabelFrame(
             self,
@@ -116,6 +117,16 @@ class Home(tb.Window):
             wraplength=520
         )
         self.explication_label.pack(fill="both", expand=True)
+        
+        tb.Button(
+            self,
+            text="HashCracking",
+            bootstyle="danger",
+             width=20,
+            padding=10,
+            command=lambda: HashCracking(self)
+        ).place(x=50, y=550)
+            
 
     def toggle_darkmode(self):
         if self.var_dark.get() == 1:
