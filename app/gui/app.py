@@ -10,7 +10,6 @@ class Home(tb.Window):
         super().__init__(themename="minty")
         self.title("Multi-tool")
         self.geometry("1280x720")
-        self.iconbitmap("app/assets/logo-tete-de-mort-png.ico")
         self.resizable(False, False)
         self.ui()
         self.mainloop()
