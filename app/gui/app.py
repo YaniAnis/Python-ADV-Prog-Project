@@ -17,10 +17,6 @@ try:
 except ImportError:
     PortScanner = None
 
-try:
-    from ExploitManager import ExploitManager
-except ImportError:
-    ExploitManager = None
 
 try:
     from DirectoryFuzzer import DirectoryFuzzer
@@ -206,14 +202,6 @@ class ModernPenTestSuite(tb.Window):
                 "command": lambda: PortScanner(self)
             })
         
-        if ExploitManager:
-            tools_data.append({
-                "name": "Exploit Manager", 
-                "icon": "⚡", 
-                "desc": "Vulnerability testing\nand exploit framework",
-                "bootstyle": "warning",
-                "command": lambda: ExploitManager(self)
-            })
         
         if DirectoryFuzzer:
             tools_data.append({
