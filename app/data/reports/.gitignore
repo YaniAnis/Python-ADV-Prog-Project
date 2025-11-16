@@ -1,0 +1,7 @@
+# Directory Fuzzer Reports
+# Les rapports générés par le Directory Fuzzer
+*.txt
+*.json
+
+# Mais gardons un exemple de rapport
+!example_report.txt

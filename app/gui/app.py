@@ -3,7 +3,7 @@ from ttkbootstrap.constants import *
 from PasswordCracker import PasswordCracker 
 from PortScanner import PortScanner
 from ExploitManager import ExploitManager
-from WebScanner import WebScanner
+from DirectoryFuzzer import DirectoryFuzzer
 from HashCracking import HashCracking
 
 class Home(tb.Window):
@@ -83,11 +83,11 @@ class Home(tb.Window):
 
         tb.Button(
             self,
-            text="Web Scanner",
+            text="Directory Fuzzer",
             bootstyle="warning",
             width=20,
             padding=10,
-            command=lambda: WebScanner(self)
+            command=lambda: DirectoryFuzzer(self)
         ).place(x=50, y=450)
 
         frame = tb.LabelFrame(
@@ -107,7 +107,8 @@ class Home(tb.Window):
                 "- Password Cracker\n"
                 "- Port Scanner\n"
                 "- Exploit Manager\n"
-                "- Web Scanner\n\n"
+                "- Directory Fuzzer\n"
+                "- Hash Cracking\n\n"
                 "Choose a tool from the left to get started."
             ),
             font=("Arial", 12),
