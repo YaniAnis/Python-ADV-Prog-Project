@@ -17,6 +17,10 @@ try:
 except ImportError:
     PortScanner = None
 
+try:
+    from ExploitManager import ExploitManager
+except ImportError:
+    ExploitManager = None
 
 try:
     from DirectoryFuzzer import DirectoryFuzzer
@@ -44,10 +48,12 @@ class ModernPenTestSuite(tb.Window):
         # Initialize variables
         self.current_theme = "cosmo"
         self.is_dark_mode = False
+        self.modern_font = "Arial"  # Initialize early
         
         # Create modern UI
         self.setup_styles()
         self.create_modern_ui()
+        self.center_window()
         self.mainloop()
     
     def iconbitmap_err_handled(self):
@@ -59,27 +65,52 @@ class ModernPenTestSuite(tb.Window):
     
     def setup_styles(self):
         """Setup custom styles for modern appearance"""
-        style = tb.Style()
-        
-        # Configure custom styles for cards
-        style.configure(
-            "Card.TFrame",
-            relief="flat",
-            borderwidth=1,
-            background="#ffffff"
-        )
-        
-        style.configure(
-            "Title.TLabel",
-            font=("Segoe UI", 24, "bold"),
-            foreground="#2c3e50"
-        )
-        
-        style.configure(
-            "Subtitle.TLabel",
-            font=("Segoe UI", 12),
-            foreground="#7f8c8d"
-        )
+        try:
+            style = tb.Style()
+            
+            # Configure custom styles for cards
+            style.configure(
+                "Card.TFrame",
+                relief="flat",
+                borderwidth=1,
+                background="#ffffff"
+            )
+            
+            # Get available fonts with fallback
+            try:
+                import tkinter.font as tkfont
+                available_fonts = tkfont.families()
+                
+                # Choose best available font
+                modern_fonts = ["Segoe UI", "Arial", "Helvetica", "DejaVu Sans"]
+                chosen_font = "Arial"  # Default fallback
+                
+                for font in modern_fonts:
+                    if font in available_fonts:
+                        chosen_font = font
+                        break
+                
+                self.modern_font = chosen_font
+                
+            except Exception:
+                self.modern_font = "Arial"
+            
+            # Configure custom styles with font fallback
+            style.configure(
+                "Title.TLabel",
+                font=(self.modern_font, 24, "bold"),
+                foreground="#2c3e50"
+            )
+            
+            style.configure(
+                "Subtitle.TLabel",
+                font=(self.modern_font, 12),
+                foreground="#7f8c8d"
+            )
+            
+        except Exception as e:
+            print(f"Style setup error: {e}")
+            self.modern_font = "Arial"
     
     def create_modern_ui(self):
         """Create modern, professional UI"""
@@ -125,7 +156,7 @@ class ModernPenTestSuite(tb.Window):
         title_label = tb.Label(
             title_frame,
             text="🔒 PenTest MultiTools",
-            font=("Segoe UI", 28, "bold"),
+            font=(getattr(self, 'modern_font', 'Arial'), 28, "bold"),
             bootstyle="primary"
         )
         title_label.pack(anchor=W)
@@ -133,7 +164,7 @@ class ModernPenTestSuite(tb.Window):
         subtitle_label = tb.Label(
             title_frame,
             text="Advanced Cybersecurity Testing Suite | University Project 2024",
-            font=("Segoe UI", 12),
+            font=(getattr(self, 'modern_font', 'Arial'), 12),
             bootstyle="secondary"
         )
         subtitle_label.pack(anchor=W, pady=(5, 0))
@@ -190,7 +221,7 @@ class ModernPenTestSuite(tb.Window):
                 "icon": "🔓", 
                 "desc": "Crack various password types\nand hashing algorithms",
                 "bootstyle": "info",
-                "command": lambda: PasswordCracker(self)
+                "command": lambda tool=PasswordCracker: self.launch_tool(tool)
             })
         
         if PortScanner:
@@ -199,9 +230,17 @@ class ModernPenTestSuite(tb.Window):
                 "icon": "🔍", 
                 "desc": "Network port enumeration\nand service detection",
                 "bootstyle": "primary",
-                "command": lambda: PortScanner(self)
+                "command": lambda tool=PortScanner: self.launch_tool(tool)
             })
         
+        if ExploitManager:
+            tools_data.append({
+                "name": "Exploit Manager", 
+                "icon": "⚡", 
+                "desc": "Vulnerability testing\nand exploit framework",
+                "bootstyle": "warning",
+                "command": lambda tool=ExploitManager: self.launch_tool(tool)
+            })
         
         if DirectoryFuzzer:
             tools_data.append({
@@ -209,7 +248,7 @@ class ModernPenTestSuite(tb.Window):
                 "icon": "📁", 
                 "desc": "Web directory discovery\nand enumeration",
                 "bootstyle": "success",
-                "command": lambda: DirectoryFuzzer(self)
+                "command": lambda tool=DirectoryFuzzer: self.launch_tool(tool)
             })
         
         if HashCracking:
@@ -218,7 +257,7 @@ class ModernPenTestSuite(tb.Window):
                 "icon": "🔐", 
                 "desc": "Password hash analysis\nand rainbow tables",
                 "bootstyle": "danger",
-                "command": lambda: HashCracking(self)
+                "command": lambda tool=HashCracking: self.launch_tool(tool)
             })
         
         if SubdomainFinderGUI:
@@ -227,7 +266,7 @@ class ModernPenTestSuite(tb.Window):
                 "icon": "🌐", 
                 "desc": "Comprehensive subdomain\nenumeration toolkit",
                 "bootstyle": "secondary",
-                "command": lambda: SubdomainFinderGUI(self)
+                "command": lambda tool=SubdomainFinderGUI: self.launch_tool(tool)
             })
         
         # Add placeholder if no tools available
@@ -270,7 +309,7 @@ class ModernPenTestSuite(tb.Window):
         desc_label = tb.Label(
             card_frame,
             text=tool_data['desc'],
-            font=("Segoe UI", 9),
+            font=(getattr(self, 'modern_font', 'Arial'), 9),
             bootstyle="secondary",
             justify=CENTER
         )
@@ -295,7 +334,7 @@ class ModernPenTestSuite(tb.Window):
         welcome_title = tb.Label(
             welcome_frame,
             text="🎓 Welcome to PenTest MultiTools",
-            font=("Segoe UI", 16, "bold"),
+            font=(self.modern_font, 16, "bold"),
             bootstyle="primary"
         )
         welcome_title.pack(anchor=W)
@@ -303,7 +342,7 @@ class ModernPenTestSuite(tb.Window):
         welcome_text = tb.Label(
             welcome_frame,
             text="This comprehensive cybersecurity testing suite provides professional-grade tools for penetration testing, security research, and educational purposes.",
-            font=("Segoe UI", 11),
+            font=(self.modern_font, 11),
             bootstyle="secondary",
             wraplength=400,
             justify=LEFT
@@ -338,13 +377,13 @@ class ModernPenTestSuite(tb.Window):
             tb.Label(
                 stat_frame,
                 text=label,
-                font=("Segoe UI", 10, "bold")
+                font=(self.modern_font, 10, "bold")
             ).pack(side=LEFT)
             
             tb.Label(
                 stat_frame,
                 text=value,
-                font=("Segoe UI", 10),
+                font=(self.modern_font, 10),
                 bootstyle="primary"
             ).pack(side=RIGHT)
         
@@ -365,7 +404,7 @@ class ModernPenTestSuite(tb.Window):
             tb.Label(
                 features_frame,
                 text=feature,
-                font=("Segoe UI", 10),
+                font=(self.modern_font, 10),
                 bootstyle="secondary"
             ).pack(anchor=W, pady=2)
         
@@ -419,7 +458,7 @@ class ModernPenTestSuite(tb.Window):
         team_label = tb.Label(
             footer_content,
             text="👥 Team: Cherfaoui M.A., Mohammed M.A., Tifahi M., Likou Y.A., Tali M.N.",
-            font=("Segoe UI", 9),
+            font=(self.modern_font, 9),
             bootstyle="secondary"
         )
         team_label.pack(side=LEFT)
@@ -428,48 +467,101 @@ class ModernPenTestSuite(tb.Window):
         version_label = tb.Label(
             footer_content,
             text=f"v2.0 | {datetime.now().strftime('%Y-%m-%d')} | Advanced Programming Project",
-            font=("Segoe UI", 9),
+            font=(self.modern_font, 9),
             bootstyle="secondary"
         )
         version_label.pack(side=RIGHT)
     
     def toggle_theme(self):
         """Toggle between light and dark themes"""
-        if self.theme_var.get():
-            self.style.theme_use("vapor")
-            self.current_theme = "vapor"
-            self.is_dark_mode = True
-        else:
-            self.style.theme_use("cosmo")
-            self.current_theme = "cosmo"
-            self.is_dark_mode = False
+        try:
+            if self.theme_var.get():
+                self.style.theme_use("vapor")
+                self.current_theme = "vapor"
+                self.is_dark_mode = True
+            else:
+                self.style.theme_use("cosmo")
+                self.current_theme = "cosmo"
+                self.is_dark_mode = False
+        except Exception as e:
+            print(f"Theme toggle error: {e}")
+    
+    def launch_tool(self, tool_class):
+        """Launch a tool with proper error handling"""
+        try:
+            if tool_class:
+                tool_class(self)
+            else:
+                self.show_tool_error()
+        except Exception as e:
+            self.show_launch_error(str(e))
+    
+    def show_launch_error(self, error_msg):
+        """Show error when launching a tool fails"""
+        try:
+            if hasattr(tb.dialogs, 'Messagebox'):
+                tb.dialogs.Messagebox.showerror(
+                    title="Tool Launch Error",
+                    message=f"Failed to launch tool:\n\n{error_msg}\n\n"
+                           f"Please check:\n"
+                           f"• Tool dependencies are installed\n"
+                           f"• All required files are present\n"
+                           f"• No conflicts with other applications",
+                    parent=self
+                )
+            else:
+                # Fallback for older versions
+                from tkinter import messagebox
+                messagebox.showerror(
+                    "Tool Launch Error",
+                    f"Failed to launch tool:\n{error_msg}"
+                )
+        except Exception:
+            print(f"Tool launch error: {error_msg}")
+    
+    def center_window(self):
+        """Center the window on screen"""
+        try:
+            self.update_idletasks()
+            width = self.winfo_reqwidth()
+            height = self.winfo_reqheight()
+            pos_x = (self.winfo_screenwidth() // 2) - (width // 2)
+            pos_y = (self.winfo_screenheight() // 2) - (height // 2)
+            self.geometry(f"{width}x{height}+{pos_x}+{pos_y}")
+        except Exception:
+            pass
     
     def show_about(self):
         """Show about dialog"""
-        about_window = tb.Toplevel(self)
-        about_window.title("About PenTest MultiTools")
-        about_window.geometry("500x400")
-        about_window.resizable(False, False)
-        
-        # Center the window
-        about_window.transient(self)
-        about_window.grab_set()
-        
-        # About content
-        content_frame = tb.Frame(about_window, padding=30)
-        content_frame.pack(fill=BOTH, expand=True)
-        
-        # Title
-        tb.Label(
-            content_frame,
-            text="🔒 PenTest MultiTools",
-            font=("Segoe UI", 20, "bold"),
-            bootstyle="primary"
-        ).pack(pady=(0, 20))
-        
-        # Description
-        about_text = """
-Advanced Cybersecurity Testing Suite
+        try:
+            about_window = tb.Toplevel(self)
+            about_window.title("About PenTest MultiTools")
+            about_window.geometry("500x400")
+            about_window.resizable(False, False)
+            
+            # Center the about window
+            about_window.transient(self)
+            about_window.grab_set()
+            
+            # Position relative to parent
+            x = self.winfo_x() + 50
+            y = self.winfo_y() + 50
+            about_window.geometry(f"500x400+{x}+{y}")
+            
+            # About content
+            content_frame = tb.Frame(about_window, padding=30)
+            content_frame.pack(fill=BOTH, expand=True)
+            
+            # Title
+            tb.Label(
+                content_frame,
+                text="🔒 PenTest MultiTools",
+                font=(self.modern_font, 20, "bold"),
+                bootstyle="primary"
+            ).pack(pady=(0, 20))
+            
+            # Description
+            about_text = """Advanced Cybersecurity Testing Suite
 Version 2.0
 
 This comprehensive penetration testing toolkit provides professional-grade tools for cybersecurity research, vulnerability assessment, and educational purposes.
@@ -486,74 +578,123 @@ Advanced Programming Course 2024
 • Subdomain Finder
 
 ⚠️ Legal Notice:
-This tool is for educational and authorized testing only. Always ensure you have explicit permission before testing any systems.
-        """
-        
-        tb.Label(
-            content_frame,
-            text=about_text,
-            font=("Segoe UI", 10),
-            bootstyle="secondary",
-            justify=LEFT
-        ).pack(pady=(0, 20))
-        
-        # Close button
-        tb.Button(
-            content_frame,
-            text="Close",
-            bootstyle="primary",
-            command=about_window.destroy
-        ).pack()
+This tool is for educational and authorized testing only. Always ensure you have explicit permission before testing any systems."""
+            
+            tb.Label(
+                content_frame,
+                text=about_text,
+                font=(self.modern_font, 10),
+                bootstyle="secondary",
+                justify=LEFT
+            ).pack(pady=(0, 20))
+            
+            # Close button
+            tb.Button(
+                content_frame,
+                text="Close",
+                bootstyle="primary",
+                command=about_window.destroy
+            ).pack()
+            
+        except Exception as e:
+            print(f"About dialog error: {e}")
+            # Fallback simple message
+            try:
+                from tkinter import messagebox
+                messagebox.showinfo("About", "PenTest MultiTools v2.0\nAdvanced Cybersecurity Testing Suite")
+            except:
+                pass
     
     def confirm_exit(self):
         """Confirm exit with dialog"""
-        result = tb.dialogs.Messagebox.yesno(
-            title="Exit Confirmation",
-            message="Are you sure you want to exit PenTest MultiTools?",
-            parent=self
-        )
-        if result == "Yes":
-            self.destroy()
+        try:
+            if hasattr(tb.dialogs, 'Messagebox'):
+                result = tb.dialogs.Messagebox.yesno(
+                    title="Exit Confirmation",
+                    message="Are you sure you want to exit PenTest MultiTools?",
+                    parent=self
+                )
+                if result == "Yes":
+                    self.destroy()
+            else:
+                # Fallback for older versions
+                from tkinter import messagebox
+                result = messagebox.askyesno("Exit Confirmation", "Are you sure you want to exit?")
+                if result:
+                    self.destroy()
+        except Exception as e:
+            print(f"Exit dialog error: {e}")
+            self.destroy()  # Exit anyway if dialog fails
     
     def open_docs(self):
         """Open documentation (placeholder)"""
-        tb.dialogs.Messagebox.showinfo(
-            title="Documentation",
-            message="Documentation will be available soon!\nCheck the README.md file for usage instructions.",
-            parent=self
-        )
+        try:
+            if hasattr(tb.dialogs, 'Messagebox'):
+                tb.dialogs.Messagebox.showinfo(
+                    title="Documentation",
+                    message="Documentation will be available soon!\nCheck the README.md file for usage instructions.",
+                    parent=self
+                )
+            else:
+                from tkinter import messagebox
+                messagebox.showinfo("Documentation", "Check the README.md file for usage instructions.")
+        except Exception as e:
+            print(f"Docs dialog error: {e}")
     
     def open_github(self):
         """Open GitHub repository (placeholder)"""
-        tb.dialogs.Messagebox.showinfo(
-            title="GitHub Repository", 
-            message="GitHub repository link:\nhttps://github.com/your-repo/pentest-multitools",
-            parent=self
-        )
+        try:
+            if hasattr(tb.dialogs, 'Messagebox'):
+                tb.dialogs.Messagebox.showinfo(
+                    title="GitHub Repository", 
+                    message="GitHub repository link:\nhttps://github.com/your-repo/pentest-multitools",
+                    parent=self
+                )
+            else:
+                from tkinter import messagebox
+                messagebox.showinfo("GitHub Repository", "https://github.com/your-repo/pentest-multitools")
+        except Exception as e:
+            print(f"GitHub dialog error: {e}")
     
     def open_tryhackme(self):
         """Open TryHackMe website"""
         try:
             webbrowser.open("https://tryhackme.com")
-        except:
-            tb.dialogs.Messagebox.showinfo(
-                title="TryHackMe",
-                message="Visit: https://tryhackme.com\nPerfect platform for testing these tools!",
-                parent=self
-            )
+        except Exception as e:
+            print(f"Browser open error: {e}")
+            try:
+                if hasattr(tb.dialogs, 'Messagebox'):
+                    tb.dialogs.Messagebox.showinfo(
+                        title="TryHackMe",
+                        message="Visit: https://tryhackme.com\nPerfect platform for testing these tools!",
+                        parent=self
+                    )
+                else:
+                    from tkinter import messagebox
+                    messagebox.showinfo("TryHackMe", "Visit: https://tryhackme.com")
+            except:
+                print("Failed to show TryHackMe info")
     
     def show_tool_error(self):
         """Show error message for unavailable tools"""
-        tb.dialogs.Messagebox.showwarning(
-            title="Tool Unavailable",
-            message="This tool module is not available.\n\n"
-                   "Please check:\n"
-                   "• All tool files are present in the gui directory\n"
-                   "• Required dependencies are installed\n"
-                   "• File permissions are correct\n\n"
-                   "Available tools will be shown in the grid.",
-            parent=self
-        )
+        try:
+            if hasattr(tb.dialogs, 'Messagebox'):
+                tb.dialogs.Messagebox.showwarning(
+                    title="Tool Unavailable",
+                    message="This tool module is not available.\n\n"
+                           "Please check:\n"
+                           "• All tool files are present in the gui directory\n"
+                           "• Required dependencies are installed\n"
+                           "• File permissions are correct\n\n"
+                           "Available tools will be shown in the grid.",
+                    parent=self
+                )
+            else:
+                from tkinter import messagebox
+                messagebox.showwarning("Tool Unavailable", 
+                                     "This tool module is not available. Check installation.")
+        except Exception as e:
+            print(f"Tool error dialog failed: {e}")
 
 if __name__ == "__main__":
     ModernPenTestSuite()
