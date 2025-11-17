@@ -1,8 +1,7 @@
 import ttkbootstrap as tb
 from ttkbootstrap.constants import *
 
-
-class ExploitManager:
+class HashCracking():
     def __init__(self, master):
         self.window = tb.Toplevel(master)
         self.window.title("Exploit Manager")
@@ -15,7 +14,7 @@ class ExploitManager:
 
         tb.Label(
             self.window,
-            text="Bienvenue dans Exploit Manager !",
+            text="Bienvenue dans HashCracking !",
             font=("Helvetica", 14),
             padding=10
         ).place(x=150, y=40)
