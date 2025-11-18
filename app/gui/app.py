@@ -27,10 +27,8 @@ try:
 except ImportError:
     DirectoryFuzzer = None
 
-try:
-    from HashCracking import HashCracking
-except ImportError:
-    HashCracking = None
+# HashCracking removed - focusing on password attacks only
+HashCracking = None
 
 try:
     from SubdomainFinder import SubdomainFinderGUI
@@ -204,7 +202,7 @@ class ModernPenTestSuite(tb.Window):
     
     def create_tools_section(self, parent):
         """Create modern tools grid"""
-        tools_frame = tb.LabelFrame(
+        tools_frame = tb.Labelframe(
             parent,
             text="🛠️ Cybersecurity Tools",
             padding=20,
@@ -319,7 +317,7 @@ class ModernPenTestSuite(tb.Window):
     
     def create_info_section(self, parent):
         """Create information and statistics section"""
-        info_frame = tb.LabelFrame(
+        info_frame = tb.Labelframe(
             parent,
             text="📊 Dashboard & Information",
             padding=20,
@@ -350,7 +348,7 @@ class ModernPenTestSuite(tb.Window):
         welcome_text.pack(anchor=W, pady=(10, 0))
         
         # Statistics section
-        stats_frame = tb.LabelFrame(info_frame, text="📈 Suite Statistics", padding=15)
+        stats_frame = tb.Labelframe(info_frame, text="📈 Suite Statistics", padding=15)
         stats_frame.pack(fill=X, pady=(0, 20))
         
         # Calculate available tools
@@ -388,7 +386,7 @@ class ModernPenTestSuite(tb.Window):
             ).pack(side=RIGHT)
         
         # Features section
-        features_frame = tb.LabelFrame(info_frame, text="✨ Key Features", padding=15)
+        features_frame = tb.Labelframe(info_frame, text="✨ Key Features", padding=15)
         features_frame.pack(fill=X, pady=(0, 20))
         
         features = [
@@ -409,7 +407,7 @@ class ModernPenTestSuite(tb.Window):
             ).pack(anchor=W, pady=2)
         
         # Quick actions
-        actions_frame = tb.LabelFrame(info_frame, text="⚡ Quick Actions", padding=15)
+        actions_frame = tb.Labelframe(info_frame, text="⚡ Quick Actions", padding=15)
         actions_frame.pack(fill=X)
         
         actions_grid = tb.Frame(actions_frame)

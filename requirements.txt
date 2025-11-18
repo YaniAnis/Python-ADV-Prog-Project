@@ -1,19 +1,156 @@
-scapy==2.5.0
-python-nmap==0.7.1
-impacket==0.11.0
-pwntools==4.11.0
-pymetasploit3==1.0.3
-paramiko==3.4.0
-boofuzz==0.4.1
-requests==2.31.0
-beautifulsoup4==4.12.2
-mechanize==0.4.9
-selenium==4.15.0
+# Core GUI Framework
 ttkbootstrap==1.10.1
-colorama==0.4.6
-python-dotenv==1.0.0
-pyyaml==6.0.1
-cryptography==41.0.7
-pycryptodome==3.19.0
-fastapi==0.109.1
-hashids==1.3.1
+tkinter-tooltip==2.1.0
+pillow>=10.0.0
+
+# Networking and Security Libraries
+requests>=2.31.0
+urllib3>=2.0.0
+socket
+ssl
+dns
+dnspython>=2.4.2
+python-nmap>=0.7.1
+scapy>=2.5.0
+
+# Cryptography and Hashing
+cryptography>=41.0.0
+hashlib
+hmac
+bcrypt>=4.0.1
+passlib>=1.7.4
+pycryptodome>=3.18.0
+
+# Threading and Async
+threading
+asyncio
+concurrent.futures
+queue
+
+# Data Processing
+itertools
+string
+re
+json
+csv
+xml.etree.ElementTree
+base64
+binascii
+
+# File and System Operations
+os
+sys
+pathlib
+shutil
+tempfile
+glob
+
+# Time and Date
+time
+datetime
+calendar
+
+# Mathematical Operations
+random
+secrets
+math
+statistics
+
+# HTTP and Web
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+selenium>=4.15.0
+fake-useragent>=1.4.0
+
+# Password and Wordlist Generation
+wordlist>=1.0.4
+pypwned>=2.1.0
+
+# Network Discovery
+python-whois>=0.8.0
+shodan>=1.30.0
+censys>=2.2.0
+
+# Subdomain Enumeration
+sublist3r>=1.1
+dnsdumpster>=0.0.1
+
+# Port Scanning Enhancement
+python-masscan>=0.1.6
+masscan>=1.3.2
+
+# Hash Cracking Enhancement
+john>=0.0.1
+hashcat-utils>=1.9
+
+# Fuzzing and Directory Discovery
+dirsearch>=0.4.3
+gobuster>=3.6
+
+# Report Generation and Logging
+reportlab>=4.0.0
+matplotlib>=3.7.0
+pandas>=2.1.0
+numpy>=1.25.0
+openpyxl>=3.1.0
+
+# Configuration and Environment
+python-dotenv>=1.0.0
+configparser
+argparse
+click>=8.1.0
+
+# Testing Libraries (for development)
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+mock>=5.1.0
+
+# Network Utilities
+netaddr>=0.9.0
+ipaddress
+netifaces>=0.11.0
+
+# Text Processing
+textdistance>=4.6.0
+fuzzywuzzy>=0.18.0
+python-levenshtein>=0.21.0
+
+# Progress Bars and UI Enhancement
+tqdm>=4.66.0
+rich>=13.5.0
+colorama>=0.4.6
+
+# Database Support (optional)
+sqlite3
+sqlalchemy>=2.0.0
+
+# API and External Services
+shodan>=1.30.0
+virustotal-api>=1.1.11
+
+# Additional Security Tools
+pwntools>=4.11.0
+paramiko>=3.3.0
+pyopenssl>=23.2.0
+
+# File Format Support
+python-magic>=0.4.27
+python-docx>=0.8.11
+pypdf2>=3.0.1
+
+# Encoding and Decoding
+chardet>=5.2.0
+python-magic>=0.4.27
+
+# CLI Enhancement
+click>=8.1.0
+prompt-toolkit>=3.0.39
+
+# Memory and Performance
+psutil>=5.9.0
+memory-profiler>=0.61.0
+
+# Version Compatibility
+setuptools>=68.0.0
+pip>=23.0.0
+wheel>=0.41.0

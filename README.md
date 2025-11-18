@@ -38,13 +38,17 @@ setup.bat
 
 ## 🔧 Fonctionnalités
 
-L’application propose une interface GUI basée sur TTKBootstrap incluant :
+L'application propose une interface GUI basée sur TTKBootstrap incluant :
 
-- **Network Discovery** : scans de réseau avec Scapy et Nmap
+- **Network Discovery** : scans de réseau avec Scapy et Nmap  
 - **Port Scanner** : analyse de ports et services ouverts
-- **Password Cracker** : interface pour Hydra et John
-- **Web Scanner** : tests de sécurité d’applications web
-- **Exploit Manager** : gestionnaire Metasploit simplifié
+- **TryHackMe Password Cracker** : outil éducatif pour tests d'authentification
+  - Attaques par dictionnaire avec wordlists TryHackMe
+  - Démonstrations de force brute éducatives
+  - Analyse de patterns de mots de passe
+  - Tests de services (SSH/FTP/HTTP) pour CTF
+- **Directory Fuzzer** : découverte de répertoires web
+- **Subdomain Finder** : reconnaissance de sous-domaines
 
 
 
