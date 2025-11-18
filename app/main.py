@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 PenTest MultiTools - Main Application Entry Point
 Advanced Cybersecurity Testing Suite for Educational Purposes

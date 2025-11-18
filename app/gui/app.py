@@ -12,7 +12,7 @@ try:
 except ImportError:
     PasswordCracker = None
 
-try:
+try: 
     from PortScanner import PortScanner
 except ImportError:
     PortScanner = None
