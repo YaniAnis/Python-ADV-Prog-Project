@@ -27,10 +27,8 @@ try:
 except ImportError:
     DirectoryFuzzer = None
 
-try:
-    from HashCracking import HashCracking
-except ImportError:
-    HashCracking = None
+# HashCracking removed - focusing on password attacks only
+HashCracking = None
 
 try:
     from SubdomainFinder import SubdomainFinderGUI
