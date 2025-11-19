@@ -164,7 +164,7 @@ class ModernPenTestSuite(tb.Window):
         
         subtitle_label = tb.Label(
             title_frame,
-            text="Advanced Cybersecurity Testing Suite | University Project 2024",
+            text="Advanced Cybersecurity Testing Suite | University Project 2025",
             font=(getattr(self, 'modern_font', 'Arial'), 12),
             bootstyle="secondary"
         )
