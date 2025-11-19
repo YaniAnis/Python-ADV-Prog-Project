@@ -34,7 +34,7 @@ except ImportError:
     HashCracking = None
 
 try:
-    from SubdomainFinder import SubdomainFinderGUI
+    from SubdomainFinder import SubdomainFinderGUI 
 except ImportError:
     SubdomainFinderGUI = None
 
@@ -568,7 +568,7 @@ Version 2.0
 This comprehensive penetration testing toolkit provides professional-grade tools for cybersecurity research, vulnerability assessment, and educational purposes.
 
 🎓 University Project
-Advanced Programming Course 2024
+Advanced Programming Course 2025
 
 🛠️ Tools Included:
 • Password Cracker
