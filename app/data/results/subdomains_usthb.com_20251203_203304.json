@@ -1,0 +1,1241 @@
+{
+  "domain": "usthb.com",
+  "total_found": 136,
+  "active_subdomains": 136,
+  "techniques_used": [
+    "dns_bruteforce",
+    "certificate_transparency",
+    "search_engines",
+    "zone_transfer",
+    "web_crawler"
+  ],
+  "results": [
+    {
+      "subdomain": "ns1.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "icinga.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "ww2.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "email.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "cpanel.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "npm.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "beta.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "img.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "development.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "smtp.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "download.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "mx.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "wwww.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "www8.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "mysql.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "whm.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "prometheus.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "assets.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "bbs.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "openshift.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "beta2.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "www1.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "ns.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "forum.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "files.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "kibana.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "www9.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "secure.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "gitlab.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "www6.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "autoconfig.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "origin.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "staging.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "sensu.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "artifactory.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "portal.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "ns3.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "marathon.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "new.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "testing.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "old.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "database.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "ftp2.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "svn.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "mail.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "mongodb.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "rancher.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "erp.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "webdisk.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "k8s.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "web.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "pop3.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "cacti.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "ns2.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "vault.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "media.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "webmail.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "m.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "admin.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "docker.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "help.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "docs.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "oracle.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "vpn.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "packages.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "wiki.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "redis.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "pop.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "phpmyadmin.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "downloads.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "shop.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "nagios.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "imap.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "crm.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "shop2.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "mysql2.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "bitbucket.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "bugzilla.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "backup.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "mobile.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "test.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "store.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "trac.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "maven.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "jenkins.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "autodiscover.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "puppet.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "support.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "mx1.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "mail2.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "db.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "www.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "elastic.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "repo.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "zabbix.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "www4.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "etcd.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "mesos.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "images.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "confluence.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "news.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "mailserver.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "localhost.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "ww1.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "api.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "uploads.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "munin.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:49"
+    },
+    {
+      "subdomain": "chef.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "jira.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "consul.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "registry.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "redmine.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "vpn2.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "repository.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "www3.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "git.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "hub.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "ansible.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "owa.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "static.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "extranet.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "www7.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "postgres.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "cache.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "sql.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "dev.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "demo.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "www2.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "intranet.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "kubernetes.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "www5.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "grafana.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "production.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "blog.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "ftp.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    },
+    {
+      "subdomain": "cdn.usthb.com",
+      "ip_addresses": [
+        "185.53.178.99"
+      ],
+      "method": "DNS Bruteforce",
+      "status": "active",
+      "timestamp": "2025-12-03 20:31:50"
+    }
+  ],
+  "timestamp": "2025-12-03 20:32:40",
+  "duration": 50.85,
+  "scan_interrupted": false
+}

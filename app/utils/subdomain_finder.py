@@ -35,12 +35,13 @@ except ImportError:
 class SubdomainFinder:
     """Core subdomain enumeration engine"""
     
-    def __init__(self):
+    def __init__(self, export_manager=None):
         self.found_subdomains: Set[str] = set()
         self.results: List[Dict] = []
         self.is_running = False
         self.wordlists_dir = "app/data/wordlists"
-        self.results_dir = "app/data/results"
+        self.results_dir = "app/data/results"  # Fallback for backward compatibility
+        self.export_manager = export_manager  # Optional ExportManager
         self._ensure_directories()
         self._create_default_wordlists()
     
@@ -896,14 +897,35 @@ class SubdomainFinder:
         """Save scan results to file"""
         timestamp = time.strftime("%Y%m%d_%H%M%S")
         domain = results.get("domain", "unknown")
+        base_name = f"subdomains_{domain}"
+        
+        # Use ExportManager if available, otherwise fallback to old method
+        if self.export_manager:
+            try:
+                from pathlib import Path
+                if format_type == "json":
+                    filepath = self.export_manager.get_scan_export_path(base_name, "json")
+                elif format_type == "txt":
+                    filepath = self.export_manager.get_scan_export_path(base_name, "txt")
+                elif format_type == "csv":
+                    filepath = self.export_manager.get_scan_export_path(base_name, "csv")
+                else:
+                    filepath = self.export_manager.get_scan_export_path(base_name, format_type)
+                
+                filename = str(filepath)
+            except Exception as e:
+                print(f"ExportManager error, using fallback: {e}")
+                # Fallback to old method
+                filename = f"{self.results_dir}/{base_name}_{timestamp}.{format_type}"
+        else:
+            # Old method for backward compatibility
+            filename = f"{self.results_dir}/{base_name}_{timestamp}.{format_type}"
         
         if format_type == "json":
-            filename = f"{self.results_dir}/subdomains_{domain}_{timestamp}.json"
             with open(filename, 'w') as f:
                 json.dump(results, f, indent=2)
         
         elif format_type == "txt":
-            filename = f"{self.results_dir}/subdomains_{domain}_{timestamp}.txt"
             with open(filename, 'w') as f:
                 f.write(f"Subdomain Enumeration Results for {domain}\n")
                 f.write(f"Scan Date: {results.get('timestamp', 'Unknown')}\n")
@@ -921,7 +943,6 @@ class SubdomainFinder:
                     f.write("-" * 40 + "\n")
         
         elif format_type == "csv":
-            filename = f"{self.results_dir}/subdomains_{domain}_{timestamp}.csv"
             with open(filename, 'w') as f:
                 f.write("Subdomain,Status,Method,IP_Addresses,Timestamp\n")
                 for result in results.get("results", []):
