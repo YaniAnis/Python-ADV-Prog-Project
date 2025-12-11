@@ -12,51 +12,6 @@ dns
 dnspython>=2.4.2
 python-nmap>=0.7.1
 scapy>=2.5.0
-
-# Cryptography and Hashing
-cryptography>=41.0.0
-hashlib
-hmac
-bcrypt>=4.0.1
-passlib>=1.7.4
-pycryptodome>=3.18.0
-
-# Threading and Async
-threading
-asyncio
-concurrent.futures
-queue
-
-# Data Processing
-itertools
-string
-re
-json
-csv
-xml.etree.ElementTree
-base64
-binascii
-
-# File and System Operations
-os
-sys
-pathlib
-shutil
-tempfile
-glob
-
-# Time and Date
-time
-datetime
-calendar
-
-# Mathematical Operations
-random
-secrets
-math
-statistics
-
-# HTTP and Web
 beautifulsoup4>=4.12.0
 lxml>=4.9.0
 selenium>=4.15.0
@@ -66,13 +21,10 @@ fake-useragent>=1.4.0
 wordlist>=1.0.4
 pypwned>=2.1.0
 
-# Network Discovery
+# Recon / OSINT / enumeration
 python-whois>=0.8.0
 shodan>=1.30.0
 censys>=2.2.0
-
-# Subdomain Enumeration
-sublist3r>=1.1
 dnsdumpster>=0.0.1
 
 # Port Scanning Enhancement
