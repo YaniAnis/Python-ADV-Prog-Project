@@ -1,0 +1,17 @@
+{
+  "id": "hackthebox",
+  "name": "hackthebox",
+  "description": "uioiu",
+  "created_at": "2025-12-03T20:20:09.846049",
+  "modified_at": "2025-12-03T20:20:09.846049",
+  "settings": {
+    "auto_save": true,
+    "theme": "cosmo"
+  },
+  "stats": {
+    "scans_performed": 0,
+    "reports_generated": 0,
+    "last_scan": null,
+    "last_accessed": "2025-12-03T20:53:42.345613"
+  }
+}

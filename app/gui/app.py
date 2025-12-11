@@ -39,9 +39,14 @@ except ImportError:
     SubdomainFinderGUI = None
 
 class ModernPenTestSuite(tb.Window):
-    def __init__(self):
+    def __init__(self, project=None):
         super().__init__(themename="cosmo")
-        self.title("🔒 PenTest MultiTools - Advanced Cybersecurity Suite")
+        
+        # Store project context
+        self.project = project
+        project_name = project['name'] if project else "No Project"
+        
+        self.title(f"🔒 PenTest MultiTools - {project_name}")
         self.geometry("1400x800")
         self.resizable(True, True)
         self.iconbitmap_err_handled()
@@ -50,6 +55,14 @@ class ModernPenTestSuite(tb.Window):
         self.current_theme = "cosmo"
         self.is_dark_mode = False
         self.modern_font = "Arial"  # Initialize early
+        
+        # Initialize ExportManager with project context
+        sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        from utils import ExportManager, ProjectManager
+        self.project_manager = ProjectManager()
+        self.export_manager = ExportManager(self.project_manager)
+        if project:
+            self.export_manager.set_current_project(project['id'])
         
         # Create modern UI
         self.setup_styles()
@@ -162,9 +175,13 @@ class ModernPenTestSuite(tb.Window):
         )
         title_label.pack(anchor=W)
         
+        # Project name subtitle
+        project_name = self.project['name'] if self.project else "No Project"
+        subtitle_text = f"📁 Project: {project_name} | Advanced Cybersecurity Testing Suite"
+        
         subtitle_label = tb.Label(
             title_frame,
-            text="Advanced Cybersecurity Testing Suite | University Project 2025",
+            text=subtitle_text,
             font=(getattr(self, 'modern_font', 'Arial'), 12),
             bootstyle="secondary"
         )
@@ -184,6 +201,15 @@ class ModernPenTestSuite(tb.Window):
             command=self.toggle_theme
         )
         theme_switch.pack(side=RIGHT, padx=(0, 10))
+        
+        # Switch Project button
+        switch_project_btn = tb.Button(
+            controls_frame,
+            text="📁 Switch Project",
+            bootstyle="warning-outline",
+            command=self.switch_project
+        )
+        switch_project_btn.pack(side=RIGHT, padx=(0, 10))
         
         # About button
         about_btn = tb.Button(
@@ -455,10 +481,11 @@ class ModernPenTestSuite(tb.Window):
         footer_content = tb.Frame(footer_frame)
         footer_content.pack(fill=X)
         
-        # Left side - Team info
+        # Left side - Project and team info
+        project_name = self.project['name'] if self.project else "No Project"
         team_label = tb.Label(
             footer_content,
-            text="👥 Team: Cherfaoui M.A., Mohammed M.A., Tifahi M., Likou Y.A., Tali M.N.",
+            text=f"📁 {project_name} | 👥 Team: Cherfaoui M.A., Mohammed M.A., Tifahi M., Likou Y.A., Tali M.N.",
             font=(self.modern_font, 9),
             bootstyle="secondary"
         )
@@ -696,6 +723,45 @@ This tool is for educational and authorized testing only. Always ensure you have
                                      "This tool module is not available. Check installation.")
         except Exception as e:
             print(f"Tool error dialog failed: {e}")
+    
+    def switch_project(self):
+        """Switch to a different project"""
+        result = tb.dialogs.Messagebox.yesno(
+            title="Switch Project",
+            message="Do you want to switch to a different project?\n\nThe current application will close and restart with the project selector.",
+            parent=self
+        )
+        
+        if result == "Yes":
+            # Get the path to main.py
+            import subprocess
+            import os
+            import sys
+            main_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'main.py')
+            
+            # Start new process
+            subprocess.Popen([sys.executable, main_path])
+            
+            # Close current application
+            self.destroy()
+            sys.exit(0)
 
 if __name__ == "__main__":
-    ModernPenTestSuite()
+    import tempfile
+    import json
+    import os
+    
+    # Try to load project from temp file
+    temp_file = os.path.join(tempfile.gettempdir(), 'pentest_selected_project.json')
+    project = None
+    
+    if os.path.exists(temp_file):
+        try:
+            with open(temp_file, 'r') as f:
+                project = json.load(f)
+            # Clean up temp file
+            os.remove(temp_file)
+        except:
+            pass
+    
+    ModernPenTestSuite(project=project)

@@ -35,8 +35,13 @@ class SubdomainFinderGUI:
             pass
         self.window.resizable(True, True)
         
-        # Initialize core
-        self.core = SubdomainFinder()
+        # Get ExportManager from parent if available
+        export_manager = None
+        if hasattr(master, 'export_manager'):
+            export_manager = master.export_manager
+        
+        # Initialize core with ExportManager
+        self.core = SubdomainFinder(export_manager=export_manager)
         self.scan_thread = None
         self.start_time = None
         self.current_results = {}
